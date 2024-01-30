@@ -30,6 +30,8 @@ class _BottomNavigationbarScreenState extends State<BottomNavigationbarScreen> {
     HomeScreen(),
     orderScreen(),
     Container(
+      height: 200,
+     width: 200,
      child: Text("Coming Soon....",
           textAlign: TextAlign.center,
           style: aveNirLTProBlack.copyWith(
