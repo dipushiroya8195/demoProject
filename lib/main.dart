@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
         ),
       ),
-      home: HomeScreen(),
-      // routes: routes,
+
+      routes: routes,
     );
   }
   var routes = <String, WidgetBuilder>{
