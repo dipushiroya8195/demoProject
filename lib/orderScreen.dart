@@ -104,6 +104,8 @@ class _orderScreenState extends State<orderScreen> {
                                       fontWeight: FontWeight.w600,
                                       overflow: TextOverflow.ellipsis,
                                       color: ThemeManager().getBlackColor,)),
+
+
                                 ],
                               ),
                             ),
