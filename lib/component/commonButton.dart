@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:food/utils/common_function.dart';
 
 import '../utils/ThemeManager.dart';
 import '../utils/appConst.dart';
@@ -26,8 +28,8 @@ class _CommonButtonState extends State<CommonButton> {
           color: ThemeManager().getOrangeColor,
           borderRadius: BorderRadius.circular(50)
       ),
-      child:Text(widget.name, style: AvenirLTProRoman.copyWith(
-          fontSize: width * 0.042,
+      child:Text(widget.name, style: aveNirLTProRoman.copyWith(
+          fontSize: buttonFontSize(width),
           fontWeight: FontWeight.w500,
           color: ThemeManager().getWhiteColor),
       ),

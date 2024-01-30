@@ -7,7 +7,7 @@ import '../component/commonButton.dart';
 import '../component/commonTextFormField.dart';
 import '../component/routes.dart';
 import '../component/validation.dart';
-import '../notifire/authNotifire.dart';
+import '../notifire/auth_noti_fire.dart';
 import '../utils/ThemeManager.dart';
 import '../utils/appConst.dart';
 import '../utils/textConst.dart';
@@ -68,7 +68,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Container(
                           alignment: Alignment.center,
                           margin: EdgeInsets.only(top: height*0.06),
-                          child: Text(TextConst.createAccount, style: AvenirLTProBlack.copyWith(
+                          child: Text(TextConst.createAccount, style: aveNirLTProBlack.copyWith(
                               fontSize: width * 0.075,
                               fontWeight: FontWeight.w400,
                               color: ThemeManager().getBlueColor),
@@ -107,7 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Container(
                           margin: EdgeInsets.only(top: height * 0.015),
                           child: TextFormField(
-                            style: AvenirLTProMedium.copyWith(
+                            style: aveNirLTProMedium.copyWith(
                                 fontSize: width * 0.04,
                                 fontWeight: FontWeight.w500,
                                 color: ThemeManager().getGrey1Color),
@@ -128,7 +128,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               contentPadding:
                               EdgeInsets.symmetric(vertical: height*0.018,horizontal: width*0.06),
                               hintText: "Enter your password",
-                              hintStyle: AvenirLTProMedium.copyWith(
+                              hintStyle: aveNirLTProMedium.copyWith(
                                   fontSize: width * 0.04,
                                   fontWeight: FontWeight.w500,
                                   color: ThemeManager().getGrey2Color),
@@ -195,7 +195,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ),
                         Container(
                           margin: EdgeInsets.only(top: height*0.05),
-                          child: Text(TextConst.byClickingSignupText,textAlign: TextAlign.center, style: AvenirLTProRoman.copyWith(
+                          child: Text(TextConst.byClickingSignupText,textAlign: TextAlign.center, style: aveNirLTProRoman.copyWith(
                               fontSize: width * 0.035,
                               fontWeight: FontWeight.w400,
                               color: ThemeManager().getGrey1Color),

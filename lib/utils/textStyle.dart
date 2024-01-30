@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-var AvenirLTProBlack =
+TextStyle aveNirLTProBlack =
 TextStyle(fontFamily: "AvenirLTProText", fontWeight: FontWeight.w100);
-var AvenirLTProMedium =
+TextStyle aveNirLTProMedium =
 TextStyle(fontFamily: "AvenirLTProText", fontWeight: FontWeight.w500);
-var AvenirLTProLight =
+TextStyle aveNirLTProLight =
 TextStyle(fontFamily: "AvenirLTProText", fontWeight: FontWeight.w300);
-var AvenirLTProRoman =
+TextStyle aveNirLTProRoman =
 TextStyle(fontFamily: "AvenirLTProText", fontWeight: FontWeight.w300);

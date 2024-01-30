@@ -33,7 +33,7 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
     return Container(
       child: TextFormField(
         autovalidateMode: AutovalidateMode.onUserInteraction,
-        style: AvenirLTProMedium.copyWith(
+        style: aveNirLTProMedium.copyWith(
             fontSize: width * 0.04,
             fontWeight: FontWeight.w500,
             color: themeManager.getGrey1Color),
@@ -68,7 +68,7 @@ class _CommonTextFormFieldState extends State<CommonTextFormField> {
           contentPadding:
           EdgeInsets.symmetric(vertical: height*0.018,horizontal: width*0.06),
           hintText: widget.txt,
-          hintStyle: AvenirLTProMedium.copyWith(
+          hintStyle: aveNirLTProMedium.copyWith(
               fontSize: width * 0.04,
               fontWeight: FontWeight.w500,
               color: themeManager.getGrey2Color),

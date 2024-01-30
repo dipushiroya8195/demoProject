@@ -1,7 +1,10 @@
 
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../utils/common_function.dart';
+import '../utils/textStyle.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import '../component/bottomNavigationBar.dart';
@@ -10,7 +13,6 @@ import '../component/routes.dart';
 import '../utils/ThemeManager.dart';
 import '../utils/appConst.dart';
 import '../utils/textConst.dart';
-import '../utils/textStyle.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key ?key}) : super(key: key);
@@ -73,27 +75,26 @@ class _SplashScreenState extends State<SplashScreen> {
           //--------------------------------------------text View--------------------------
           Container(
             margin: EdgeInsets.only(left: width*0.06,right: width*0.06,top: height*0.32),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: ListView(
               children: [
-                Text(TextConst.Discover, style: AvenirLTProMedium.copyWith(
+                Text(TextConst.Discover, style: aveNirLTProMedium.copyWith(
                     fontSize: width * 0.1,
                     fontWeight: FontWeight.w400,
                     color: ThemeManager().getWhiteColor),
                 ),
-                Text(TextConst.Nearby, style: AvenirLTProMedium.copyWith(
+                Text(TextConst.Nearby, style: aveNirLTProMedium.copyWith(
                     fontSize: width * 0.1,
                     fontWeight: FontWeight.w400,
                     color: ThemeManager().getWhiteColor),
                 ),
-                Text(TextConst.Shops, style: AvenirLTProMedium.copyWith(
+                Text(TextConst.Shops, style: aveNirLTProMedium.copyWith(
                     fontSize: width * 0.1,
                     fontWeight: FontWeight.w400,
                     color: ThemeManager().getWhiteColor),
                 ),
                 Container(
                   margin: EdgeInsets.only(top: height*0.015),
-                  child: Text(TextConst.setLocationText, style: AvenirLTProRoman.copyWith(
+                  child: Text(TextConst.setLocationText, style: aveNirLTProRoman.copyWith(
                       fontSize: width * 0.045,
                       fontWeight: FontWeight.w400,
                       color: ThemeManager().getWhiteColor),
@@ -118,14 +119,14 @@ class _SplashScreenState extends State<SplashScreen> {
                   },
                   child: Container(
                     alignment: Alignment.center,
-                    height: height*0.063,
+                    height:  height*0.063,
                     width: width,
                     decoration: BoxDecoration(
                         color: ThemeManager().getWhiteColor,
                         borderRadius: BorderRadius.circular(50)
                     ),
-                    child:  Text(TextConst.signUp, style: AvenirLTProRoman.copyWith(
-                        fontSize: width * 0.042,
+                    child:  Text(TextConst.signUp, style: aveNirLTProRoman.copyWith(
+                        fontSize: buttonFontSize(width),
                         fontWeight: FontWeight.w500,
                         color: ThemeManager().getOrangeColor),
                     ),
@@ -146,8 +147,8 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: ThemeManager().getGreyButtonColor,
                         borderRadius: BorderRadius.circular(50)
                     ),
-                    child:  Text(TextConst.Explore, style: AvenirLTProRoman.copyWith(
-                        fontSize: width * 0.042,
+                    child:  Text(TextConst.Explore, style: aveNirLTProRoman.copyWith(
+                        fontSize:buttonFontSize(width),
                         fontWeight: FontWeight.w500,
                         color: ThemeManager().getGrey1Color),
                     ),
@@ -187,7 +188,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: width*0.03,right: width*0.03),
-                    child: Text(TextConst.Explore, style: AvenirLTProMedium.copyWith(
+                    child: Text(TextConst.Explore, style: aveNirLTProMedium.copyWith(
                         fontSize: width * 0.06,
                         fontWeight: FontWeight.w500,
                         color: ThemeManager().getBlueColor),
@@ -195,7 +196,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: width*0.05,right: width*0.05,top: height*0.03),
-                    child: Text(TextConst.allowUseLoction, style: AvenirLTProRoman.copyWith(
+                    child: Text(TextConst.allowUseLoction, style: aveNirLTProRoman.copyWith(
                         fontSize: width * 0.04,
                         color: ThemeManager().getBlueColor),
                     ),
@@ -235,3 +236,4 @@ class _SplashScreenState extends State<SplashScreen> {
     }
   }
 }
+

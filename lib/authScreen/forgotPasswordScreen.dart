@@ -9,7 +9,7 @@ import '../utils/ThemeManager.dart';
 import '../utils/appConst.dart';
 import '../utils/textConst.dart';
 import '../utils/textStyle.dart';
-import 'loginScreen.dart';
+import 'login_screen.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({Key ?key}) : super(key: key);
@@ -62,7 +62,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         Container(
                           alignment: Alignment.center,
                           margin: EdgeInsets.only(top: height*0.05),
-                          child: Text(TextConst.forgotPassword, style: AvenirLTProBlack.copyWith(
+                          child: Text(TextConst.forgotPassword, style: aveNirLTProBlack.copyWith(
                               fontSize: width * 0.075,
                               fontWeight: FontWeight.w400,
                               color: ThemeManager().getBlueColor),
@@ -72,7 +72,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         //----------------------------long text-------------------
                         Container(
                           margin: EdgeInsets.only(top: height*0.03),
-                          child: Text(TextConst.longTextForgot,textAlign: TextAlign.center, style: AvenirLTProRoman.copyWith(
+                          child: Text(TextConst.longTextForgot,textAlign: TextAlign.center, style: aveNirLTProRoman.copyWith(
                               fontSize: width * 0.04,
                               fontWeight: FontWeight.w400,
                               color: ThemeManager().getBlackColor),
@@ -143,7 +143,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: width*0.03,right: width*0.03),
-                    child: Text(TextConst.yourPassword, style: AvenirLTProMedium.copyWith(
+                    child: Text(TextConst.yourPassword, style: aveNirLTProMedium.copyWith(
                         fontSize: width * 0.06,
                         fontWeight: FontWeight.w500,
                         color: ThemeManager().getBlueColor),
@@ -151,7 +151,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: width*0.05,right: width*0.05,top: height*0.03),
-                    child: Text(TextConst.setupNewPwd,textAlign: TextAlign.center ,style: AvenirLTProRoman.copyWith(
+                    child: Text(TextConst.setupNewPwd,textAlign: TextAlign.center ,style: aveNirLTProRoman.copyWith(
                         fontSize: width * 0.04,
                         color: ThemeManager().getBlueColor),
                     ),

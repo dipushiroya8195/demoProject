@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:food/utils/common_function.dart';
 
 import '../homeScreen.dart';
 import '../orderScreen.dart';
@@ -45,7 +47,7 @@ class _BottomNavigationbarScreenState extends State<BottomNavigationbarScreen> {
         child: Container(
           width: width,
           margin: EdgeInsets.only(left: width*0.06, right: width*0.06),
-          height: height*0.1,
+          height: kIsWeb ?height*0.07 :height*0.1,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,13 +65,13 @@ class _BottomNavigationbarScreenState extends State<BottomNavigationbarScreen> {
                     children: [
                       Image(
                           image: AssetImage("assets/images/compassIcon.png"),
-                          height: height * 0.030,
+                          height:height * 0.030,
                           color:currentIndex==0? ThemeManager().getOrangeColor:ThemeManager().getGrey2Color
                       ),
                       Container(
                         margin: EdgeInsets.only(top: height * 0.01),
-                        child: Text(TextConst.explore,textAlign: TextAlign.center, style: AvenirLTProRoman.copyWith(
-                            fontSize: width * 0.036,
+                        child: Text(TextConst.explore,textAlign: TextAlign.center, style: aveNirLTProRoman.copyWith(
+                            fontSize: textFontSize(width),
                             fontWeight: FontWeight.w400,
                             color: currentIndex==0? ThemeManager().getOrangeColor:ThemeManager().getGrey2Color),
                         ),
@@ -96,8 +98,8 @@ class _BottomNavigationbarScreenState extends State<BottomNavigationbarScreen> {
                       ),
                       Container(
                         margin: EdgeInsets.only(top: height * 0.01),
-                        child: Text(TextConst.myOrder,textAlign: TextAlign.center, style: AvenirLTProRoman.copyWith(
-                            fontSize: width * 0.036,
+                        child: Text(TextConst.myOrder,textAlign: TextAlign.center, style: aveNirLTProRoman.copyWith(
+                            fontSize: textFontSize(width),
                             fontWeight: FontWeight.w400,
                             color:currentIndex==1? ThemeManager().getOrangeColor:ThemeManager().getGrey2Color)
                         ),
@@ -124,8 +126,8 @@ class _BottomNavigationbarScreenState extends State<BottomNavigationbarScreen> {
                       ),
                       Container(
                         margin: EdgeInsets.only(top: height * 0.01),
-                        child: Text(TextConst.favourite,textAlign: TextAlign.center, style: AvenirLTProRoman.copyWith(
-                            fontSize: width * 0.036,
+                        child: Text(TextConst.favourite,textAlign: TextAlign.center, style: aveNirLTProRoman.copyWith(
+                            fontSize: textFontSize(width),
                             fontWeight: FontWeight.w400,
                             color: currentIndex==2? ThemeManager().getOrangeColor:ThemeManager().getGrey2Color),
                         ),
@@ -151,8 +153,8 @@ class _BottomNavigationbarScreenState extends State<BottomNavigationbarScreen> {
                       ),
                       Container(
                         margin: EdgeInsets.only(top: height * 0.01),
-                        child: Text(TextConst.profile,textAlign: TextAlign.center, style: AvenirLTProRoman.copyWith(
-                            fontSize: width * 0.036,
+                        child: Text(TextConst.profile,textAlign: TextAlign.center, style: aveNirLTProRoman.copyWith(
+                            fontSize: textFontSize(width),
                             fontWeight: FontWeight.w400,
                             color:currentIndex==3? ThemeManager().getOrangeColor:ThemeManager().getGrey2Color)
                         ),

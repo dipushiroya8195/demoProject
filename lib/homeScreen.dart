@@ -1,5 +1,6 @@
 
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
@@ -12,7 +13,7 @@ import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 
 import 'component/commonButton.dart';
-import 'notifire/authNotifire.dart';
+import 'notifire/auth_noti_fire.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -156,12 +157,12 @@ class _ExtraScreenState extends State<HomeScreen> {
                     child: Row(
                       children: [
                         Container(child: Image.asset("assets/images/lisaImage.png",scale: 4.0,),),
-                        Text("Hi,  ",textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                        Text("Hi,  ",textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                             fontSize: width * 0.043,
                             fontWeight: FontWeight.w600,
                             color: ThemeManager().getBlackColor),
                         ),
-                        Text(getDetail.getName.isEmpty?"guest":getDetail.getName,textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                        Text(getDetail.getName.isEmpty?"guest":getDetail.getName,textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                             fontSize: width * 0.043,
                             fontWeight: FontWeight.w600,
                             color: ThemeManager().getBlackColor),
@@ -192,7 +193,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                               Expanded(
                                 child: TextFormField(
                                   autovalidateMode: AutovalidateMode.onUserInteraction,
-                                  style: AvenirLTProMedium.copyWith(
+                                  style: aveNirLTProMedium.copyWith(
                                       fontSize: width * 0.04,
                                       fontWeight: FontWeight.w500,
                                       color: ThemeManager().getGrey1Color),
@@ -225,7 +226,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                                     contentPadding:
                                     EdgeInsets.symmetric(vertical: height*0.01,horizontal: width*0.06),
                                     hintText: "Search...",
-                                    hintStyle: AvenirLTProRoman.copyWith(
+                                    hintStyle: aveNirLTProRoman.copyWith(
                                         fontSize: width * 0.045,
                                         color: ThemeManager().getGrey2Color),
 
@@ -283,7 +284,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                           children: [
                             Container(
                               margin: EdgeInsets.only(bottom: height*0.02,right: width*0.05),
-                              height: height * 0.28,
+                              height: kIsWeb ? height* 0.50:height * 0.28,
                               width: width,
                               child: CarouselSlider.builder(
                                 unlimitedMode: true,
@@ -323,12 +324,12 @@ class _ExtraScreenState extends State<HomeScreen> {
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Text(sliderImageView[index]["foodName"],textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                                            Text(sliderImageView[index]["foodName"],textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                                                 fontSize: width * 0.048,
                                                 fontWeight: FontWeight.w600,
                                                 color: ThemeManager().getWhiteColor),
                                             ),
-                                            Text(sliderImageView[index]["address"],textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                                            Text(sliderImageView[index]["address"],textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                                                 fontSize: width * 0.04,
                                                 fontWeight: FontWeight.w600,
                                                 color: ThemeManager().getGreyButtonColor),
@@ -357,7 +358,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                           margin: EdgeInsets.only(right: width*0.03),
                           child: Row(
                             children: [
-                              Text(TextConst.topCategories,textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                              Text(TextConst.topCategories,textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                                   fontSize: width * 0.05,
                                   fontWeight: FontWeight.w600,
                                   color: ThemeManager().getBlackColor),
@@ -365,7 +366,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                               Expanded(
                                 child: Container(
                                   alignment: Alignment.topRight,
-                                  child: Text(TextConst.showAll,textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                                  child: Text(TextConst.showAll,textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                                       fontSize: width * 0.04,
                                       fontWeight: FontWeight.w600,
                                       color: ThemeManager().getOrangeColor),
@@ -380,7 +381,7 @@ class _ExtraScreenState extends State<HomeScreen> {
 
                         Container(
                           margin: EdgeInsets.only(top: height*0.015,left: width*0.0),
-                          height: height*0.2,
+                          height: kIsWeb ? height *0.4: height*0.2,
                           child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,
@@ -431,12 +432,12 @@ class _ExtraScreenState extends State<HomeScreen> {
                                       ),
                                       child: Image.asset(topCategoriesDetail[index]["foodImage"],scale:4.0,),
                                     ),
-                                    Text(topCategoriesDetail[index]["foodName"],style: AvenirLTProMedium.copyWith(
+                                    Text(topCategoriesDetail[index]["foodName"],style: aveNirLTProMedium.copyWith(
                                         fontSize: width * 0.04,
                                         fontWeight: FontWeight.w400,
                                         color: ThemeManager().getBlackColor),
                                     ),
-                                    Text(topCategoriesDetail[index]["places"],style: AvenirLTProMedium.copyWith(
+                                    Text(topCategoriesDetail[index]["places"],style: aveNirLTProMedium.copyWith(
                                         fontSize: width * 0.032,
                                         fontWeight: FontWeight.w400,
                                         color: ThemeManager().getGrey2Color),
@@ -451,7 +452,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                           margin: EdgeInsets.only(left: width*0.0,right: width*0.02,top: height*0.01),
                           child: Row(
                             children: [
-                              Text(TextConst.discoverPlaces,textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                              Text(TextConst.discoverPlaces,textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                                   fontSize: width * 0.048,
                                   fontWeight: FontWeight.w600,
                                   color: ThemeManager().getBlackColor),
@@ -459,7 +460,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                               Expanded(
                                 child: Container(
                                   alignment: Alignment.topRight,
-                                  child: Text(TextConst.showAll,textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                                  child: Text(TextConst.showAll,textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                                       fontSize: width * 0.04,
                                       fontWeight: FontWeight.w600,
                                       color: ThemeManager().getOrangeColor),
@@ -473,7 +474,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                         //-----------------------discoverPlaces view-----------------------------
                         Container(
                           margin: EdgeInsets.only(top: height*0.018,left: width*0.0),
-                          height: height*0.35,
+                          height: kIsWeb? height*0.75:height*0.35,
                           child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,
@@ -555,7 +556,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                                       children: [
                                         Text(
                                           discoverDetail[index]["name"],
-                                          style: AvenirLTProMedium.copyWith(
+                                          style: aveNirLTProMedium.copyWith(
                                               fontSize: width * 0.045,
                                               fontWeight: FontWeight.w400,
                                               color: ThemeManager().getBlackColor),
@@ -563,7 +564,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                                         Text(
                                           discoverDetail[index]["subtitle"],
                                           style:
-                                          AvenirLTProMedium.copyWith(
+                                          aveNirLTProMedium.copyWith(
                                               fontSize: width * 0.036,
                                               fontWeight: FontWeight.w400,
                                               color: ThemeManager().getGrey2Color),
@@ -578,7 +579,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                                               Container(
                                                 margin: EdgeInsets.only(left: width * 0.01),
                                                 child: Text(discoverDetail[index]["starcount"],
-                                                  style: AvenirLTProMedium.copyWith(
+                                                  style: aveNirLTProMedium.copyWith(
                                                       fontSize: width * 0.036,
                                                       fontWeight: FontWeight.w400,
                                                       color: ThemeManager().getBlackColor),
@@ -588,7 +589,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                                                 margin: EdgeInsets.only(left: width*0.01),
                                                 child: Text(
                                                   discoverDetail[index]["rating"],
-                                                  style: AvenirLTProMedium.copyWith(
+                                                  style: aveNirLTProMedium.copyWith(
                                                       fontSize: width * 0.035,
                                                       fontWeight: FontWeight.w400,
                                                       color: ThemeManager().getGrey2Color),
@@ -604,7 +605,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                                                     borderRadius: BorderRadius.circular(50)),
                                                 child: Text(
                                                   discoverDetail[index]["Category"],
-                                                  style: AvenirLTProMedium.copyWith(
+                                                  style: aveNirLTProMedium.copyWith(
                                                       fontSize: width * 0.035,
                                                       fontWeight: FontWeight.w400,
                                                       color: ThemeManager().getWhiteColor),
@@ -624,7 +625,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                           margin: EdgeInsets.only(left: width*0.0,right: width*0.03,top: height*0.01),
                           child: Row(
                             children: [
-                              Text(TextConst.recentOffers,textAlign: TextAlign.center, style: AvenirLTProBlack.copyWith(
+                              Text(TextConst.recentOffers,textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
                                   fontSize: width * 0.048,
                                   fontWeight: FontWeight.w600,
                                   color: ThemeManager().getBlackColor),
@@ -632,7 +633,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                               Expanded(
                                 child: Container(
                                   alignment: Alignment.topRight,
-                                  child: Text(TextConst.showAll,textAlign:TextAlign.center, style: AvenirLTProBlack.copyWith(
+                                  child: Text(TextConst.showAll,textAlign:TextAlign.center, style: aveNirLTProBlack.copyWith(
                                       fontSize: width * 0.04,
                                       fontWeight: FontWeight.w600,
                                       color: ThemeManager().getOrangeColor),
@@ -646,7 +647,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                         //-----------------------------recent Offers view----------------------------------
                         Container(
                           margin: EdgeInsets.only(top: height*0.015,left: width*0.0),
-                          height: height*0.36,
+                          height: kIsWeb?height*0.60:height*0.36,
                           child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,
@@ -698,12 +699,12 @@ class _ExtraScreenState extends State<HomeScreen> {
                                       width:height*0.28,
                                       child: Image.asset(recentOffer[index]["recentImage"],fit: BoxFit.fill,),
                                     ),
-                                    Text(recentOffer[index]["offer"],style: AvenirLTProMedium.copyWith(
+                                    Text(recentOffer[index]["offer"],style: aveNirLTProMedium.copyWith(
                                         fontSize: width * 0.042,
                                         fontWeight: FontWeight.w400,
                                         color: ThemeManager().getBlackColor),
                                     ),
-                                    Text(recentOffer[index]["name"],style: AvenirLTProMedium.copyWith(
+                                    Text(recentOffer[index]["name"],style: aveNirLTProMedium.copyWith(
                                         fontSize: width * 0.036,
                                         fontWeight: FontWeight.w400,
                                         color: ThemeManager().getGrey2Color),
@@ -775,7 +776,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: width*0.03,right: width*0.03),
-                    child: Text("Enable Your Location", style: AvenirLTProMedium.copyWith(
+                    child: Text("Enable Your Location", style: aveNirLTProMedium.copyWith(
                         fontSize: width * 0.06,
                         fontWeight: FontWeight.w500,
                         color: ThemeManager().getBlueColor),
@@ -783,7 +784,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: width*0.05,right: width*0.05,top: height*0.03),
-                    child: Text(TextConst.allowUseLoction, style: AvenirLTProRoman.copyWith(
+                    child: Text(TextConst.allowUseLoction, style: aveNirLTProRoman.copyWith(
                         fontSize: width * 0.04,
                         color: ThemeManager().getBlueColor),
                     ),

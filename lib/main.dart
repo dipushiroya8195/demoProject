@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'authScreen/SignUpScreen.dart';
+import 'authScreen/sign_up_screen.dart';
 import 'authScreen/forgotPasswordScreen.dart';
-import 'authScreen/loginScreen.dart';
+import 'authScreen/login_screen.dart';
 import 'authScreen/splashScreen.dart';
 import 'component/routes.dart';
-import 'notifire/authNotifire.dart';
+import 'notifire/auth_noti_fire.dart';
 
 void main(){
   runApp(MultiProvider(
