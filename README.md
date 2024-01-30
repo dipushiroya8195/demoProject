@@ -17,6 +17,24 @@ MyApp: The main entry point of the application. It sets up the MaterialApp and p
 
 main(): The entry point of the Dart program. It calls runApp() to start the Flutter application.
 
+Creating a pubspec.yaml file is an essential step when working with Flutter projects. This file is used to define the 
+metadata of your Flutter app, including dependencies, version constraints, and other settings.
+
+Explanation:
+name: Specify the name of your Flutter app.
+description: Provide a brief description of your app.
+version: Set the version number of your app.
+environment: Define the Flutter SDK version range that your app is compatible with.
+dependencies: List the dependencies required for your app. In this example, it includes the flutter SDK and cupertino_icons as an example.
+dev_dependencies: List dependencies used only during development or testing.
+
+Assets/Images in the assets folder:
+Place your images in the assets folder of your Flutter project.
+Update your pubspec.yaml file to include the assets:
+    flutter:
+    assets:
+    - assets/images/
+
 ->Maybe there will be one error on top to pub get or else you can open the terminal from the bottom 
 open the terminal and write cmd -> flutter pub get Or else you can see this video for reference Youtube link
 https://www.youtube.com/watch?v=ye3P6V-11s4
