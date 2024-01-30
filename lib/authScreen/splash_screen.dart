@@ -4,15 +4,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../utils/common_function.dart';
-import '../utils/textStyle.dart';
+import '../utils/text_style.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../component/bottomNavigationBar.dart';
-import '../component/commonButton.dart';
+import '../component/bottom_navigation_bar.dart';
+import '../component/common_button.dart';
 import '../component/routes.dart';
 import '../utils/ThemeManager.dart';
-import '../utils/appConst.dart';
-import '../utils/textConst.dart';
+import '../utils/app_const.dart';
+import '../utils/text_const.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key ?key}) : super(key: key);

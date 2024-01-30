@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:food/utils/ThemeManager.dart';
-import 'package:food/utils/appConst.dart';
-import 'package:food/utils/textStyle.dart';
+import 'package:food/utils/app_const.dart';
+import 'package:food/utils/text_style.dart';
 
 import 'model/customerInfoModel.dart';
 import 'package:http/http.dart' as http;

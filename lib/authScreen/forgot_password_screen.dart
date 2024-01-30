@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../component/commonButton.dart';
-import '../component/commonTextFormField.dart';
+import '../component/common_button.dart';
+import '../component/commom_text_form_field.dart';
 import '../component/routes.dart';
 import '../component/validation.dart';
 import '../utils/ThemeManager.dart';
-import '../utils/appConst.dart';
-import '../utils/textConst.dart';
-import '../utils/textStyle.dart';
+import '../utils/app_const.dart';
+import '../utils/text_const.dart';
+import '../utils/text_style.dart';
 import 'login_screen.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {

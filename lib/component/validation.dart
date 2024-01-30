@@ -1,4 +1,4 @@
-import '../utils/textConst.dart';
+import '../utils/text_const.dart';
 
 String? isValidEmail(String? email) {
   RegExp regex = RegExp(r'\w+@\w+\.\w+');

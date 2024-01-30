@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 import '../utils/ThemeManager.dart';
-import '../utils/appConst.dart';
-import '../utils/textStyle.dart';
+import '../utils/app_const.dart';
+import '../utils/text_style.dart';
 
 class CommonTextFormField extends StatefulWidget {
   final String txt;

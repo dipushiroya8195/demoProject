@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
 import 'package:food/utils/ThemeManager.dart';
-import 'package:food/utils/appConst.dart';
-import 'package:food/utils/textConst.dart';
-import 'package:food/utils/textStyle.dart';
+import 'package:food/utils/app_const.dart';
+import 'package:food/utils/text_const.dart';
+import 'package:food/utils/text_style.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 
-import 'component/commonButton.dart';
+import 'component/common_button.dart';
 import 'notifire/auth_noti_fire.dart';
 
 class HomeScreen extends StatefulWidget {

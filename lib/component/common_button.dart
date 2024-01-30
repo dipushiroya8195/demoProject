@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:food/utils/common_function.dart';
 
 import '../utils/ThemeManager.dart';
-import '../utils/appConst.dart';
-import '../utils/textStyle.dart';
+import '../utils/app_const.dart';
+import '../utils/text_style.dart';
 
 class CommonButton extends StatefulWidget {
   final String name;

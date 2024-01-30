@@ -5,9 +5,9 @@ import 'package:food/utils/common_function.dart';
 import '../homeScreen.dart';
 import '../orderScreen.dart';
 import '../utils/ThemeManager.dart';
-import '../utils/appConst.dart';
-import '../utils/textConst.dart';
-import '../utils/textStyle.dart';
+import '../utils/app_const.dart';
+import '../utils/text_const.dart';
+import '../utils/text_style.dart';
 
 class BottomNavigationbarScreen  extends StatefulWidget {
   const BottomNavigationbarScreen({Key? key}) : super(key: key);
