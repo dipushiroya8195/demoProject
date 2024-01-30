@@ -29,8 +29,23 @@ class _BottomNavigationbarScreenState extends State<BottomNavigationbarScreen> {
   final List<Widget> viewContainer = [
     HomeScreen(),
     orderScreen(),
-    Container(),
-    Container(),
+    Container(
+     child: Text("Coming Soon....",
+          textAlign: TextAlign.center,
+          style: aveNirLTProBlack.copyWith(
+              fontSize: width * 0.033,
+              fontWeight: FontWeight.w600,
+              color: ThemeManager().getBlackColor)),
+
+    ),
+    Container(
+      child: Text("Coming Soon....",
+          textAlign: TextAlign.center,
+          style: aveNirLTProBlack.copyWith(
+              fontSize: width * 0.033,
+              fontWeight: FontWeight.w600,
+              color: ThemeManager().getBlackColor)),
+    ),
   ];
   @override
   Widget build(BuildContext context) {
