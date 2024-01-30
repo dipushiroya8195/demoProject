@@ -29,24 +29,25 @@ class _BottomNavigationbarScreenState extends State<BottomNavigationbarScreen> {
   final List<Widget> viewContainer = [
     HomeScreen(),
     orderScreen(),
-    Container(
-      height: 200,
-     width: 200,
-     child: Text("Coming Soon....",
-          textAlign: TextAlign.center,
-          style: aveNirLTProBlack.copyWith(
-              fontSize: width * 0.033,
-              fontWeight: FontWeight.w600,
-              color: ThemeManager().getBlackColor)),
-
+    Scaffold(
+      body: Center(
+        child: Text("Coming Soon....",
+            textAlign: TextAlign.center,
+            style: aveNirLTProBlack.copyWith(
+                fontSize: width * 0.033,
+                fontWeight: FontWeight.w600,
+                color: ThemeManager().getBlackColor)),
+      ),
     ),
     Container(
-      child: Text("Coming Soon....",
-          textAlign: TextAlign.center,
-          style: aveNirLTProBlack.copyWith(
-              fontSize: width * 0.033,
-              fontWeight: FontWeight.w600,
-              color: ThemeManager().getBlackColor)),
+      child: Center(
+        child: Text("Coming Soon....",
+            textAlign: TextAlign.center,
+            style: aveNirLTProBlack.copyWith(
+                fontSize: width * 0.033,
+                fontWeight: FontWeight.w600,
+                color: ThemeManager().getBlackColor)),
+      ),
     ),
   ];
   @override
