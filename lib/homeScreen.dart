@@ -284,7 +284,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                           children: [
                             Container(
                               margin: EdgeInsets.only(bottom: height*0.02,right: width*0.05),
-                              height: kIsWeb ? height* 0.50:height * 0.28,
+                              height: kIsWeb ? height* 0.50:height * 0.10,
                               width: width,
                               child: CarouselSlider.builder(
                                 unlimitedMode: true,
@@ -325,12 +325,12 @@ class _ExtraScreenState extends State<HomeScreen> {
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(sliderImageView[index]["foodName"],textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
-                                                fontSize: width * 0.048,
+                                                fontSize: width * 0.040,
                                                 fontWeight: FontWeight.w600,
                                                 color: ThemeManager().getWhiteColor),
                                             ),
                                             Text(sliderImageView[index]["address"],textAlign: TextAlign.center, style: aveNirLTProBlack.copyWith(
-                                                fontSize: width * 0.04,
+                                                fontSize: width * 0.040,
                                                 fontWeight: FontWeight.w600,
                                                 color: ThemeManager().getGreyButtonColor),
                                             ),
@@ -381,7 +381,7 @@ class _ExtraScreenState extends State<HomeScreen> {
 
                         Container(
                           margin: EdgeInsets.only(top: height*0.015,left: width*0.0),
-                          height: kIsWeb ? height *0.4: height*0.2,
+                          height: kIsWeb ? height *0.4: height*0.25,
                           child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,
@@ -474,7 +474,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                         //-----------------------discoverPlaces view-----------------------------
                         Container(
                           margin: EdgeInsets.only(top: height*0.018,left: width*0.0),
-                          height: kIsWeb? height*0.75:height*0.35,
+                          height: kIsWeb? height*0.75:height*0.40,
                           child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,
@@ -647,7 +647,7 @@ class _ExtraScreenState extends State<HomeScreen> {
                         //-----------------------------recent Offers view----------------------------------
                         Container(
                           margin: EdgeInsets.only(top: height*0.015,left: width*0.0),
-                          height: kIsWeb?height*0.60:height*0.36,
+                          height: kIsWeb?height*0.60:height*0.40,
                           child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,

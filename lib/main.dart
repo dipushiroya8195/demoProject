@@ -6,6 +6,7 @@ import 'authScreen/forgot_password_screen.dart';
 import 'authScreen/login_screen.dart';
 import 'authScreen/splash_screen.dart';
 import 'component/routes.dart';
+import 'homeScreen.dart';
 import 'notifire/auth_noti_fire.dart';
 
 void main(){
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
         ),
       ),
-      routes: routes,
+      home: HomeScreen(),
+      // routes: routes,
     );
   }
   var routes = <String, WidgetBuilder>{
